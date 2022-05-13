@@ -11,7 +11,19 @@
 <p>My first paragraph.</p>
 
    <script>
-     
+    var countries = window.location.hash.substr(1).split('&');
+var cList = $('#mylist')
+$.each(countries, function(i)
+{
+    var li = $('<li/>')
+        .addClass('ui-menu-item')
+        .attr('role', 'menuitem')
+        .appendTo(cList);
+    var aaa = $('<a/>')
+        .addClass('ui-all')
+        .text(countries[i])
+        .appendTo(li);
+});
   </script>
 </body>
 
